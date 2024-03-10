@@ -1,0 +1,538 @@
+@font-face {
+    font-family: "GmarketSans";
+    font-style: normal;
+    font-weight: 500;
+    src: url(../font/GmarketSans/GmarketSansTTFMedium.ttf);
+}
+
+@font-face {
+    font-family: "GmarketSans";
+    font-style: normal;
+    font-weight: 700;
+    src: url(../font/GmarketSans/GmarketSansTTFBold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+figure {
+    width: fit-content;
+    height: fit-content;
+}
+
+.text_hidden {
+    display: block;
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "GmarketSans";
+}
+
+header {
+    width: 100%;
+    height: 100%;
+}
+
+.h_slide {
+    width: 100%;
+    overflow: hidden;
+}
+
+.h_inner {
+    width: 100%;
+    height: 90px;
+    background-color: #1D3156;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.h_inner nav {
+    width: 45%;
+    height: 100%;
+}
+
+.h_inner nav ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: 700;
+    color: #fff;
+}
+
+.h_inner nav ul li {
+    text-align: center;
+    line-height: 50px;
+}
+
+.h_inner nav ul li:hover {
+    color: #FFC410;
+}
+
+.h_inner nav ul li a {
+    display: block;
+}
+
+.h_btn {
+    display: none;
+}
+
+.h_menu {
+    width: 50%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: #00000032;
+    z-index: 9999;
+}
+
+.ctn {
+    width: 100%;
+    height: 100px;
+}
+
+.ctn .close {
+    width: 100px;
+    height: 40px;
+    padding: 0 8px;
+    font-size: 1rem;
+    color: #1D3156;
+    border: none;
+    background-color: #cccccc81;
+}
+
+.h_menu nav ul {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    color: #1D3156;
+    text-align: center;
+    font-weight: 700;
+}
+
+.h_menu nav ul li {
+    line-height: 50px;
+}
+
+.h_menu nav ul li:hover {
+    color: #FFC410;
+    background-color: #d3d1d16e;
+}
+
+.slick-slide{
+    position: relative;
+}
+
+.slick-slide img {
+    min-height: 500px;
+    object-fit: cover;
+}
+
+.h_text{
+    width: 28%;
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    transform: translate(-50%,-50%);
+}
+
+.h_text h3{
+    font-size: 2.5rem;
+}
+
+.h_text p{
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.h_text>button{
+    border: none;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    background-color: #1D3156;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+section{
+    margin: 200px 0;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#menu h2 {
+    text-align: center;
+    margin-bottom: 100px;
+    font-size: 3rem;
+    color: #1D3156;
+}
+
+#menu .btn {
+    width: 100%;
+    max-width: 850px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#menu .btn button {
+    display: block;
+    padding: 10px 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: #1D3156;
+    margin-bottom: 50px;
+}
+
+.cbtn {
+    width: 20%;
+    position: relative;
+}
+
+.cbtn::before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 5px;
+    background-color: #FFC410;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: .3s;
+}
+
+.cbtn:hover::before {
+    width: 100%;
+}
+
+#menu .s_box {
+    width: 100%;
+    max-width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.s_box .search {
+    width: 100%;
+    max-width: 250px;
+    border: none;
+    border-bottom: 1px solid #000;
+}
+
+.s_box .sbtn {
+    padding-left: 5px;
+}
+
+#menu .menu_list {
+    width: 100%;
+    max-width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#menu .menu_list .item {
+    padding: 20px;
+    background-color: #fff;
+}
+
+#menu .menu_list img {
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.title {
+    display: flex;
+    height: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.title h3 {
+    margin-bottom: 10px;
+}
+
+.title h4 {
+    color: firebrick;
+}
+
+.info {
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    height: 100%;
+    background-color: #1D3156;
+}
+
+.flogo {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.f_text {
+    text-align: center;
+    padding-bottom: 20px;
+    color: #fff;
+}
+
+.f_text p {
+    margin-bottom: 15px;
+}
+
+.f_text>p:last-of-type {
+    margin-bottom: 50px;
+}
+
+.f_subtext {
+    display: flex;
+    justify-content: center;
+}
+
+.f_subtext p:nth-child(1)::after {
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 15px;
+    background-color: #000;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.f_text span {
+    font-size: 0.8rem;
+}
+
+@media screen and (max-width:1400px) {
+    .h_text h3{
+        font-size: 2rem;
+    }
+
+    .h_text p{
+        font-size: 1rem;
+    }
+
+    .h_text>button{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .h_inner h1 a img {
+        width: 80%;
+    }
+
+    header nav ul li {
+        font-size: 0.9rem;
+    }
+
+    #menu .btn {
+        max-width: 600px;
+    }
+
+    #menu .menu_list {
+        max-width: 80%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #menu h2 {
+        font-size: 2.2rem;
+    }
+
+    #menu .btn button {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .h_inner h1 a img {
+        width: 80%;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .h_btn {
+        display: block;
+        padding-right: 30px;
+    }
+
+    .h_btn a img {
+        width: 80%;
+    }
+
+    .h_text{
+        width: 35%;
+    }
+
+    .h_text h3{
+        font-size: 1.6rem;
+    }
+
+    .h_text p{
+        font-size: 1rem;
+    }
+
+    .h_text>button{
+        font-size: 0.8rem;
+    }
+
+    #menu .btn button {
+        font-size: 1rem;
+    }
+
+    .flogo a img {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .h_inner h1 a img {
+        width: 70%;
+    }
+
+    .h_btn a img {
+        width: 70%;
+    }
+
+    .h_text{
+        width: 50%;
+        top: 20%;
+        left: 50%;
+        text-align: center;
+    }
+
+    .h_text h3{
+        font-size: 1.6rem;
+    }
+
+    .h_text p{
+        font-size: 1rem;
+        margin: 15px 0;
+    }
+
+    .h_text>button{
+        font-size: 0.8rem;
+    }
+
+    #menu h2 {
+        font-size: 1.8rem;
+    }
+
+    #menu .s_box {
+        max-width: 100%;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    #menu .btn {
+        max-width: 500px;
+    }
+
+    #menu .menu_list {
+        max-width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .flogo a img {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    .slick-slide img {
+        min-height: 400px;
+    }
+
+    .h_text{
+        width: 80%;
+    }
+
+    .h_text h3{
+        font-size: 1.3rem;
+    }
+
+    .h_text p{
+        font-size: 0.8rem;
+        margin: 10px 0;
+    }
+
+    #menu .btn button {
+        padding: 0;
+    }
+
+    .title h3 {
+        font-size: 1rem;
+    }
+    
+    .title h4,
+    .info {
+        font-size: 0.8rem;
+    }
+    
+}
+
+@media screen and (max-width:400px) {
+    .h_inner h1 a img {
+        width: 60%;
+    }
+
+    .h_btn a img {
+        width: 70%;
+    }
+
+    .f_text p {
+        font-size: 0.9rem;
+    }
+
+
+}
